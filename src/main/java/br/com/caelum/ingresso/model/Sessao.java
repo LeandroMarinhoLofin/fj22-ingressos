@@ -22,10 +22,13 @@ public class Sessao {
 
 	private LocalTime horario;
 
+	/**
+	 * @deprecated hibernate only
+	 */
 	public Sessao() {
 
 	}
-
+	
 	public Sessao(LocalTime horario, Filme filme, Sala sala) {
 		this.setHorario(horario);
 		this.setFilme(filme);
