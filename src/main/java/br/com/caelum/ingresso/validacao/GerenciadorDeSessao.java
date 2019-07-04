@@ -19,7 +19,7 @@ public class GerenciadorDeSessao {
 			return false;
 		}
 		return sessoesDaSala.stream().noneMatch(sessaoExistente -> 
-		horarioIsConfiante(sessaoExistente, sessaoNova));
+		horarioIsConflitante(sessaoExistente, sessaoNova));
 	}
 
 	private boolean terminaAmanha(Sessao sessao) {
@@ -34,7 +34,7 @@ public class GerenciadorDeSessao {
 		return false;
 	}
 
-	private boolean horarioIsConfiante(Sessao sessaoExistente, Sessao sessaoNova) {
+	private boolean horarioIsConflitante(Sessao sessaoExistente, Sessao sessaoNova) {
 
 		LocalDateTime inicioSessaoExistente = getInicioSessaoComDiaDeHoje(sessaoExistente);
 		LocalDateTime terminoSessaoExistente = getTerminoSessaoComDiaDeHoje(sessaoExistente);
