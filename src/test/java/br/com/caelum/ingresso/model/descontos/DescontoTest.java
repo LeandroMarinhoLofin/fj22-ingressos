@@ -20,7 +20,6 @@ public class DescontoTest {
 
 	}
 
-
 	@Test
 	public void naoDeveConcederDescontoParaIngressoNormal() {
 
